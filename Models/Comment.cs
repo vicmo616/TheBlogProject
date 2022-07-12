@@ -28,7 +28,7 @@ namespace TheBlogProject.Models
         [Display(Name = "Moderated Comment")]
         public string ModeratedBody { get; set; } 
 
-        //<== Navigation properties ==> //
+        //<== NAVIGATION PROPERTIES ==> //
 
         public virtual Post Post { get; set; }
         public virtual IdentityUser Author { get; set; }
