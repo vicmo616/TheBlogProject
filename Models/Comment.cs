@@ -32,6 +32,6 @@ namespace TheBlogProject.Models
 
         public virtual Post Post { get; set; }
         public virtual IdentityUser Author { get; set; }
-        public virtual IdentityUser Moderator { get; set; } 
+        public virtual IdentityUser Moderator { get; set; }  
     }
 }
