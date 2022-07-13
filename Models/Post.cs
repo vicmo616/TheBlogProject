@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using TheBlogProject.Enums;
 
 namespace TheBlogProject.Models
 {
@@ -34,7 +35,7 @@ namespace TheBlogProject.Models
         [Display(Name = "Updated Date")]
         public DateTime? Updated { get; set; } 
 
-        public bool IsReady { get; set; } 
+        public ReadyStatus Readystatus { get; set; }
 
         public string Slug { get; set; }
 
