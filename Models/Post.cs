@@ -47,7 +47,7 @@ namespace TheBlogProject.Models
 
         // <== NAVIGATION PROPERTY ==> //
         public virtual Blog Blog { get; set; } 
-        public virtual IdentityUser Author { get; set; }
+        public virtual BlogUser Author { get; set; }
 
         public virtual ICollection<Tag> Tags { get; set; } = new HashSet<Tag>();
         public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
