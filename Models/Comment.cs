@@ -12,7 +12,7 @@ namespace TheBlogProject.Models
     {
         public int Id { get; set; }
         public int PostId { get; set; }
-        public string AuthorID { get; set; }
+        public string BlogUserId { get; set; }
         public string ModeratorId { get; set; }
 
         [Required]
@@ -34,7 +34,7 @@ namespace TheBlogProject.Models
         //<== NAVIGATION PROPERTIES ==> //
 
         public virtual Post Post { get; set; }
-        public virtual BlogUser Author { get; set; }
+        public virtual BlogUser BlogUser { get; set; }
         public virtual BlogUser Moderator { get; set; }  
     }
 }
