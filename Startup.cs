@@ -48,7 +48,7 @@ namespace TheBlogProject
 
             //Register my custom DataService class
             services.AddScoped<DataService>();
-
+            services.AddScoped<BlogSearchService>();
             //Register a preconfigured instance of the MailSettingsClass
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
             services.AddScoped<IBlogEmailSender, EmailService>();
@@ -84,11 +84,16 @@ namespace TheBlogProject
 
             app.UseEndpoints(endpoints =>
             {
+            endpoints.MapControllerRoute(
+                name: "SlugRoute",
+                pattern: "BlogPosts/UrlFriendly/{slug}",
+                defaults: new { controller = "Posts", action = "Details" });
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-        }
+        } 
     }
 }
