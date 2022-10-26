@@ -192,7 +192,7 @@ namespace TheBlogProject.Controllers
                 await _context.SaveChangesAsync();
 
                 //How do I loop over the incoming list of string?
-                foreach(var tagText in tagValues)
+                foreach(var tagText  in tagValues)
                 {
                     _context.Add(new Tag()
                     {

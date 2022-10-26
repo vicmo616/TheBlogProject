@@ -6,7 +6,7 @@ function AddTag() {
 
     //Lets use the new search function to help detect an error state
     let searchResult = search(tagEntry.value);
-    if (sesrchResult != null) {
+    if (searchResult != null) {
         //Trigger my sweet alert for whatever condition is contained in the searchResult var
         swalWithDarkButton.fire({
             html: `<span class='font-weight-bolder'>${searchResult.toUpperCase()}</span>`
@@ -73,11 +73,11 @@ function search(str) {
     }
 
     var tagsEl = document.getElementById('TagList');
-    if (tagEl) {
+    if (tagsEl) {
         let options = tagsEl.options;
         for (let index = 0; index < options.length; index++) {
             if (options[index].value == str)
-                return `The Tag #${str} was detected as a Duplicate and not permitted`
+                return `The Tag #${str} was detected as a Duplicate and not permitted`;
         }
     }
 
